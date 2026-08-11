@@ -94,8 +94,7 @@ export function RadioScene() {
 
       <main className="relative z-10 flex min-h-[calc(100vh-9rem)] flex-col items-center justify-between gap-8 px-[var(--edge)] pb-[max(var(--edge),env(safe-area-inset-bottom))] pt-[8vh]">
         <h1 lang="hi" className="text-center leading-[0.85] text-white drop-shadow-[0_4px_24px_rgba(0,0,0,0.6)]">
-          <span className="block font-wordmark text-[clamp(2.5rem,8.5vw,7rem)]">ट्रक</span>
-          <span className="block font-wordmark text-[clamp(2.5rem,8.5vw,7rem)]">वाला</span>
+          <span className="whitespace-nowrap font-wordmark text-[clamp(2.5rem,8.5vw,7rem)]">ट्रक वाला</span>
           <span className="sr-only" lang="en">
             Truck Wala — Horn OK Please
           </span>
