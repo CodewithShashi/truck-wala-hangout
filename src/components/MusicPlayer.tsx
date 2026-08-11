@@ -48,10 +48,18 @@ export function MusicPlayer({ tracks = TRACKS, autoStart, muted, onToggleMute }:
   useEffect(() => {
     if (!playing) return;
     const id = window.setInterval(() => {
-      setElapsed((e) => (e + 1 > track.duration ? 0 : e + 1));
+      setElapsed((e) => {
+        if (e + 1 > track.duration) {
+          // non-stop playback: roll into the next track
+          setIndex((i) => (i + 1) % tracks.length);
+          return 0;
+        }
+        return e + 1;
+      });
     }, 1000);
     return () => window.clearInterval(id);
-  }, [playing, track.duration]);
+  }, [playing, track.duration, tracks.length]);
+
 
   useEffect(() => () => playerRef.current?.stop(), []);
 
@@ -148,6 +156,29 @@ export function MusicPlayer({ tracks = TRACKS, autoStart, muted, onToggleMute }:
               {fmt(track.duration)}
             </span>
           </div>
+
+          <div className="mt-2 flex flex-wrap items-center gap-2">
+            <span className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground">
+              Ad-free truck radio • non-stop
+            </span>
+            <a
+              href="https://open.spotify.com/search/truck%20driving%20punjabi"
+              target="_blank"
+              rel="noreferrer"
+              className="hard-border rounded-full bg-truck-green px-3 py-1 text-[10px] font-bold uppercase tracking-widest"
+            >
+              Spotify
+            </a>
+            <a
+              href="https://music.youtube.com/search?q=truck+songs"
+              target="_blank"
+              rel="noreferrer"
+              className="hard-border rounded-full bg-truck-red px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-primary-foreground"
+            >
+              YT Music
+            </a>
+          </div>
+
         </div>
       </div>
     </motion.div>
