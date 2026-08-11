@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { TRACKS } from "@/data/tracks";
 import { useYtPlayer } from "@/hooks/use-yt-player";
-import heroBg from "@/assets/truck-hero.png.asset.json";
+import heroBg from "@/assets/truck-hero.webp";
 import { TopBar } from "./TopBar";
 import { HornButton } from "./HornButton";
 import { Bumper } from "./Bumper";
@@ -76,7 +76,7 @@ export function RadioScene() {
       <div aria-hidden className="fixed inset-0 -z-10">
         <div
           className="size-full bg-cover bg-center"
-          style={{ backgroundImage: `url(${heroBg.url})` }}
+          style={{ backgroundImage: `url(${heroBg})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-black/25 to-black/70" />
       </div>
