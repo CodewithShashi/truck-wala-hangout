@@ -48,10 +48,18 @@ export function MusicPlayer({ tracks = TRACKS, autoStart, muted, onToggleMute }:
   useEffect(() => {
     if (!playing) return;
     const id = window.setInterval(() => {
-      setElapsed((e) => (e + 1 > track.duration ? 0 : e + 1));
+      setElapsed((e) => {
+        if (e + 1 > track.duration) {
+          // non-stop playback: roll into the next track
+          setIndex((i) => (i + 1) % tracks.length);
+          return 0;
+        }
+        return e + 1;
+      });
     }, 1000);
     return () => window.clearInterval(id);
-  }, [playing, track.duration]);
+  }, [playing, track.duration, tracks.length]);
+
 
   useEffect(() => () => playerRef.current?.stop(), []);
 
