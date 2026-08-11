@@ -40,6 +40,9 @@
   --color-truck-teal: var(--truck-teal);
   --font-display: "Bebas Neue", "Archivo Black", sans-serif;
   --font-sans: "DM Sans", system-ui, sans-serif;
+  --font-wordmark: "Yatra One", "Baloo 2", cursive;
+  --font-bumper: "Baloo 2", "Noto Sans Devanagari", system-ui, sans-serif;
+
 }
 
 :root {
