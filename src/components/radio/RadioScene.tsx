@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { TRACKS } from "@/data/tracks";
 import { useYtPlayer } from "@/hooks/use-yt-player";
-import heroBg from "@/assets/truck-hero.png.asset.json";
+import heroBg from "@/assets/truck-hero.webp";
 import { TopBar } from "./TopBar";
 import { HornButton } from "./HornButton";
 import { Bumper } from "./Bumper";
