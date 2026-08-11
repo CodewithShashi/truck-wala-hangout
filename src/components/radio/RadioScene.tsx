@@ -76,7 +76,7 @@ export function RadioScene() {
       <div aria-hidden className="fixed inset-0 -z-10">
         <div
           className="size-full bg-cover bg-center"
-          style={{ backgroundImage: `url(${heroBg.url})` }}
+          style={{ backgroundImage: `url(${heroBg})` }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-black/25 to-black/70" />
       </div>
