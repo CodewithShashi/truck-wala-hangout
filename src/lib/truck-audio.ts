@@ -142,7 +142,7 @@ export class TruckPlayer {
     const tick = () => {
       const cc = getCtx();
       if (!cc || !this.master) return;
-      const deg = track.scale[Math.floor(Math.random() * track.scale.length)];
+      const deg = track.scale[Math.floor(Math.random() * track.scale.length)] ?? 0;
       const oct = this.step % 8 < 4 ? 1 : 2;
       const freq = track.root * oct * Math.pow(2, deg / 12);
       const t0 = cc.currentTime;
