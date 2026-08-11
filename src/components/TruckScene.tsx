@@ -12,6 +12,8 @@ import { TruckChat } from "./TruckChat";
 import { MusicPlayer } from "./MusicPlayer";
 import { FloatingEffects, type FloatingItem } from "./FloatingEffects";
 import { Footer } from "./Footer";
+import heroBg from "@/assets/truck-hero.png.asset.json";
+
 
 const HORN_LINES = ["POOOOON POOOON 🚚", "Side de bhai!", "Horn OK Please ✨", "Chal hat! 😤"];
 
@@ -77,7 +79,13 @@ export function TruckScene() {
 
       <main className="mx-auto max-w-6xl px-4">
         {/* HERO */}
-        <section className="flex flex-col items-center pt-8 text-center sm:pt-12">
+        <section className="relative isolate flex flex-col items-center overflow-hidden rounded-3xl px-4 pb-10 pt-8 text-center sm:pt-12">
+          <div
+            aria-hidden
+            className="absolute inset-0 -z-10 bg-cover bg-center opacity-90"
+            style={{ backgroundImage: `url(${heroBg.url})` }}
+          />
+          <div aria-hidden className="absolute inset-0 -z-10 bg-cream/55 backdrop-blur-[1px]" />
           <motion.p
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
@@ -85,6 +93,7 @@ export function TruckScene() {
           >
             Truck mein kitne log hain?
           </motion.p>
+
 
           <motion.h1
             initial={{ opacity: 0, scale: 0.9 }}
