@@ -1,20 +1,19 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { TruckScene } from "@/components/TruckScene";
+import { RadioScene } from "@/components/radio/RadioScene";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Truck Wala — Truck mein aao 🚚" },
+      { title: "Truck Wala — Indian truck driver songs | Horn OK Please" },
       {
         name: "description",
         content:
-          "Truck Wala is a playful online truck hangout: horn bajao, gaana chalao, chat karo and see who's riding right now.",
+          "Non-stop 90s Bollywood highway bangers — the songs that blast out of Indian trucks. Kumar Sanu, Altaf Raja, Udit Narayan. Press play. Horn OK Please.",
       },
-      { property: "og:title", content: "Truck Wala — Truck mein aao 🚚" },
+      { property: "og:title", content: "Truck Wala — Horn OK Please" },
       {
         property: "og:description",
-        content:
-          "Enter the truck, honk the horn, play music and hang out with other truck walas online.",
+        content: "Highway bangers off the back of an Indian truck. Non-stop, ad-light, always on.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -24,5 +23,6 @@ export const Route = createFileRoute("/")({
 });
 
 function Index() {
-  return <TruckScene />;
+  return <RadioScene />;
 }
+
