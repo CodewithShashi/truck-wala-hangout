@@ -77,13 +77,17 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Truck Wala 🚚" },
-      { name: "description", content: "An online Indian truck hangout. Horn bajao, gaana chalao." },
+      { title: "Truck Wala — Indian truck driver songs | Horn OK Please" },
+      { name: "description", content: "Non-stop 90s Bollywood highway bangers — the songs that blast out of Indian trucks. Kumar Sanu, Altaf Raja, Udit Narayan. Press play. Horn OK Please." },
       { name: "author", content: "Truck Wala" },
-      { property: "og:title", content: "Truck Wala 🚚" },
-      { property: "og:description", content: "An online Indian truck hangout. Truck mein aao." },
+      { property: "og:title", content: "Truck Wala — Indian truck driver songs | Horn OK Please" },
+      { property: "og:description", content: "Non-stop 90s Bollywood highway bangers — the songs that blast out of Indian trucks. Kumar Sanu, Altaf Raja, Udit Narayan. Press play. Horn OK Please." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Truck Wala — Indian truck driver songs | Horn OK Please" },
+      { name: "twitter:description", content: "Non-stop 90s Bollywood highway bangers — the songs that blast out of Indian trucks. Kumar Sanu, Altaf Raja, Udit Narayan. Press play. Horn OK Please." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/61fe4665-b404-4b7a-a530-803478cde1b5" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/61fe4665-b404-4b7a-a530-803478cde1b5" },
     ],
     links: [
       {
@@ -96,8 +100,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Yatra+One&family=Bebas+Neue&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap",
       },
-
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
     ],
   }),
 
